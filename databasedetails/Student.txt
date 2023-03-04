@@ -1,0 +1,58 @@
+CREATE TABLE `student` (
+  `student_id` int NOT NULL,
+  `student_name` varchar(20) DEFAULT NULL,
+  `student_branch` varchar(20) DEFAULT NULL,
+  `student_mobile` mediumtext,
+  `Borrowbooks` int DEFAULT NULL,
+  PRIMARY KEY (`student_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+SELECT `student`.`student_id`,
+    `student`.`student_name`,
+    `student`.`student_branch`,
+    `student`.`student_mobile`,
+    `student`.`Borrowbooks`
+FROM `librarysystem`.`student`;
+
+INSERT INTO `librarysystem`.`student`
+(`student_id`,
+`student_name`,
+`student_branch`,
+`student_mobile`,
+`Borrowbooks`)
+VALUES
+(<{student_id: }>,
+<{student_name: }>,
+<{student_branch: }>,
+<{student_mobile: }>,
+<{Borrowbooks: }>);
+
+UPDATE `librarysystem`.`student`
+SET
+`student_id` = <{student_id: }>,
+`student_name` = <{student_name: }>,
+`student_branch` = <{student_branch: }>,
+`student_mobile` = <{student_mobile: }>,
+`Borrowbooks` = <{Borrowbooks: }>
+WHERE `student_id` = <{expr}>;
+
+DELETE FROM `librarysystem`.`student`
+WHERE <{where_expression}>;
+
+
+                       STUDENT TABLE DATA
+
+student_id  student_name student_branch  student_mobile borrowbooks
+1	    Dhanapal	 Mechanical	56353567	2
+2	    Azrudeen	 Mechanical	8867564328	0
+3	    Abraham      Mechanical	7898768956	0
+5	    Akash	 Mechanical	7867546334	1
+10	    Ameer	 EEE	        8909789805	0
+13	    Arshad	 Mechanical	8867564328	0
+16	    Arun Kumar	 CSE	        8756578946	0
+17	    Azrudeen	 Mechanical	5635356745	1
+22	    Dhanapal	 Mechanical	7868784657	0
+32	    Gokulbharathi Civil	        8867564328	1
+52	    Varah        Civil	        8867564328	0
+				

@@ -1,0 +1,48 @@
+CREATE TABLE `bookdetails` (
+  `bookid` int NOT NULL AUTO_INCREMENT,
+  `bookname` varchar(40) DEFAULT NULL,
+  `bookauthor` varchar(30) DEFAULT NULL,
+  `bookquantity` int DEFAULT NULL,
+  PRIMARY KEY (`bookid`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+SELECT `bookdetails`.`bookid`,
+    `bookdetails`.`bookname`,
+    `bookdetails`.`bookauthor`,
+    `bookdetails`.`bookquantity`
+FROM `librarysystem`.`bookdetails`;
+
+INSERT INTO `librarysystem`.`bookdetails`
+(`bookid`,
+`bookname`,
+`bookauthor`,
+`bookquantity`)
+VALUES
+(<{bookid: }>,
+<{bookname: }>,
+<{bookauthor: }>,
+<{bookquantity: }>);
+
+UPDATE `librarysystem`.`bookdetails`
+SET
+`bookid` = <{bookid: }>,
+`bookname` = <{bookname: }>,
+`bookauthor` = <{bookauthor: }>,
+`bookquantity` = <{bookquantity: }>
+WHERE `bookid` = <{expr}>;
+
+DELETE FROM `librarysystem`.`bookdetails`
+WHERE <{where_expression}>;
+
+
+bookid  bookname               bookauthor     bookquantity
+5	The Midnight Library	Matt Haig	5
+6	Library Book	        Susan Orlean	5
+7	Giver of Stars	        Jojo Mayes	4
+9	Shadow of Wind	        Carlos	        6
+10	Borrower	        Rebecca	        4
+11	Secrets in summer	Nancy Thayer	3
+12	you love me	        Caroline	1
+13	Moon of stars	        Brathwaite	3
+			

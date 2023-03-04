@@ -1,0 +1,62 @@
+CREATE TABLE `issuebook` (
+  `Book_id` int DEFAULT NULL,
+  `Student_id` int DEFAULT NULL,
+  `Student_name` varchar(40) DEFAULT NULL,
+  `Mobile_number` mediumtext,
+  `Issued_date` date DEFAULT NULL,
+  `Return_Date` date DEFAULT NULL,
+  `Fine_Amount` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO `librarysystem`.`issuebook`
+(`Book_id`,
+`Student_id`,
+`Student_name`,
+`Mobile_number`,
+`Issued_date`,
+`Return_Date`,
+`Fine_Amount`)
+VALUES
+(<{Book_id: }>,
+<{Student_id: }>,
+<{Student_name: }>,
+<{Mobile_number: }>,
+<{Issued_date: }>,
+<{Return_Date: }>,
+<{Fine_Amount: }>);
+
+SELECT `issuebook`.`Book_id`,
+    `issuebook`.`Student_id`,
+    `issuebook`.`Student_name`,
+    `issuebook`.`Mobile_number`,
+    `issuebook`.`Issued_date`,
+    `issuebook`.`Return_Date`,
+    `issuebook`.`Fine_Amount`
+FROM `librarysystem`.`issuebook`;
+
+
+DELETE FROM `librarysystem`.`issuebook`
+WHERE <{where_expression}>;
+
+
+UPDATE `librarysystem`.`issuebook`
+SET
+`Book_id` = <{Book_id: }>,
+`Student_id` = <{Student_id: }>,
+`Student_name` = <{Student_name: }>,
+`Mobile_number` = <{Mobile_number: }>,
+`Issued_date` = <{Issued_date: }>,
+`Return_Date` = <{Return_Date: }>,
+`Fine_Amount` = <{Fine_Amount: }>
+WHERE ;
+  
+
+                                         TABLE DATA
+book_id student_id  student_name    student_mobile     issued_date     return_date     fine_amount
+7	10	    Ameer	      8867564328	2023-03-03	2023-03-04	0
+11	17	    Azrudeen	      8979678987	2023-03-03		
+7	32	    GokulBharathi     8867564328	2023-03-03		
+7	5	    Aadhi	      5678986574	2023-03-03		
+8	3	    Abraham	      8867564328	2023-03-04	2023-03-04	0
+8	52	    varahan	      8867564328	2023-03-04	2023-03-04	0

@@ -1,0 +1,46 @@
+CREATE TABLE `elibrarian` (
+  `lid` int NOT NULL AUTO_INCREMENT,
+  `lname` varchar(40) DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `mobile` mediumtext,
+  PRIMARY KEY (`lid`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+SELECT `elibrarian`.`lid`,
+    `elibrarian`.`lname`,
+    `elibrarian`.`password`,
+    `elibrarian`.`mobile`
+FROM `librarysystem`.`elibrarian`;
+
+INSERT INTO `librarysystem`.`elibrarian`
+(`lid`,
+`lname`,
+`password`,
+`mobile`)
+VALUES
+(<{lid: }>,
+<{lname: }>,
+<{password: }>,
+<{mobile: }>);
+
+UPDATE `librarysystem`.`elibrarian`
+SET
+`lid` = <{lid: }>,
+`lname` = <{lname: }>,
+`password` = <{password: }>,
+`mobile` = <{mobile: }>
+WHERE `lid` = <{expr}>;
+
+
+                Table data
+
+lid      lname           Password        Mobile
+1	Librarian1	in.librarian1	8867564326
+2	Librarian2	in.librarian2	8754367965
+3	Librarian3	in.librarian3	7867856478
+4	Librarian4	librarian4	9080776578
+5	Librarian5	librarian5	7685856789
+7	Librarian7	in.librarian7	8798675768
+			
