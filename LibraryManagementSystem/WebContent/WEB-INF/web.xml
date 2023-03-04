@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>LibraryManagementSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <description></description>
+    <display-name>AdminController</display-name>
+    <servlet-name>AdminController</servlet-name>
+    <servlet-class>controller.AdminController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminController</servlet-name>
+    <url-pattern>/controller/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LibrarianController</display-name>
+    <servlet-name>LibrarianController</servlet-name>
+    <servlet-class>controller.LibrarianController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LibrarianController</servlet-name>
+    <url-pattern>/control/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminVerify</display-name>
+    <servlet-name>AdminVerify</servlet-name>
+    <servlet-class>controller.AdminVerify</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminVerify</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LibrarianVerify</display-name>
+    <servlet-name>LibrarianVerify</servlet-name>
+    <servlet-class>controller.LibrarianVerify</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LibrarianVerify</servlet-name>
+    <url-pattern>/librarian</url-pattern>
+  </servlet-mapping>
+</web-app>
